@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo de Fulano de Tal</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var subtitulos = document.querySelectorAll("h2");
+            subtitulos.forEach(function(h2) {
+                h2.addEventListener("click", function() {
+                    var content = h2.nextElementSibling;
+                    if (content && content.tagName.toLowerCase() === "div") {
+                        content.style.display = "none";
+                    }
+                });
+                h2.addEventListener("dblclick", function() {
+                    var content = h2.nextElementSibling;
+                    if (content && content.tagName.toLowerCase() === "div") {
+                        content.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <img src="images/avatar.jpg" width="120" height="120" alt="Avatar de Fulano de Tal">
+    <h1>Fulano de Tal</h1>
+
+    <hr>
+    <h2>Perfil</h2>
+    <div>
+        <p>Profissional com sólida experiência em desenvolvimento web, focado em boas práticas e padrões de projeto.</p>
+        <p>Comprometido com resultados, aprendizado contínuo e trabalho em equipe.</p>
+    </div>
+
+    <hr>
+    <h2>Principais Competências</h2>
+    <div>
+        <ul>
+            <li>HTML5 e semântica</li>
+            <li>JavaScript básico</li>
+            <li>Versionamento com Git</li>
+            <li>Trabalho em equipe</li>
+            <li>Resolução de problemas</li>
+        </ul>
+    </div>
+
+    <hr>
+    <h2>Formação Acadêmica</h2>
+    <div>
+        <ul>
+            <li>Bacharelado em Ciência da Computação - <a href="https://www.ufrn.br">UFRN</a></li>
+            <li>Pós-graduação em Desenvolvimento Web - <a href="https://www.ifrn.edu.br">IFRN</a></li>
+        </ul>
+    </div>
+
+    <hr>
+    <h2>Experiência Profissional</h2>
+    <div>
+        <ul>
+            <li>Desenvolvedor Web - Empresa X
+                <ol>
+                    <li>Criação de sites institucionais</li>
+                    <li>Manutenção de sistemas internos</li>
+                    <li>Documentação de APIs</li>
+                </ol>
+            </li>
+            <li>Analista de Suporte - Empresa Y
+                <ol>
+                    <li>Atendimento ao usuário</li>
+                    <li>Gerenciamento de chamados</li>
+                    <li>Treinamento de equipe</li>
+                </ol>
+            </li>
+        </ul>
+        <p><a href="experiencia.html">Mais sobre minha experiência profissional</a></p>
+    </div>
+
+    <hr>
+    <h2>Contato</h2>
+    <div>
+        <p><img src="images/icon-endereco.png" width="30" height="30" alt="Ícone endereço"> <address>Rua Exemplo, 123 – Natal/RN</address></p>
+        <p><img src="images/icon-telefone.png" width="30" height="30" alt="Ícone telefone"> <a href="tel:+5584999999999">(84) 99999-9999</a></p>
+        <p><img src="images/icon-email.png" width="30" height="30" alt="Ícone email"> <a href="mailto:fulano@email.com">fulano@email.com</a></p>
+    </div>
+
+</body>
+</html>
